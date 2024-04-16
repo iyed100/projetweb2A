@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TravelSwift</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/jquery.min.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> 
+<link rel="stylesheet" href="css/chocolat.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:title" content="Vide" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Trip Guide Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/bootstrap.min.js"></script>
+<link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300' rel='stylesheet' type='text/css'>
+<script src="js/jquery.chocolat.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('.gallery a').Chocolat();
+    });
+</script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){        
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+        });
+    });
+</script>
+<script src="js/modernizr.custom.97074.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    form {
+        width: 60%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .user {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <div class="banner-section">
+        <div class="container">
+            <div class="banner-heder">
+                <h3>We Plan Your Trip<span>Best Available Choice in Town</span></h3>
+        </div>
+            
+        </div>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-menu">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                          <div class="navbar-brand logo">
+                                <h1><a href="index.html"><span>Travel</span> Swift</a></h1>
+                            </div>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                          <ul class="nav navbar-nav cl-effect-11">
+                            <li class="active"><a href="#" data-hover="Home" class="scroll">Home </a></li>
+                            <li><a href="#users" class="scroll">Gestion des utilisateurs</a></li>
+                          </ul>
+                        </div>
+                    </div>
+                </nav>
+            <div class="clearfix"></div>
+            </div>  
+        </div> 
+    </div>
+    <div id="users" class="container">
+        <form id="userForm" action="traitement.php" method="post">
+            <h2>Gestion des Utilisateurs</h2>
+            <div class="user">
+                <label for="nom">Nom :</label>
+                <input type="text" name="nom[]" required>
+
+                <label for="prenom">Prénom :</label>
+                <input type="text" name="prenom[]" required>
+
+                <label for="email">Email :</label>
+                <input type="email" name="email[]" required>
+
+                <label for="tel">Téléphone :</label>
+                <input type="tel" name="tel[]" required>
+
+                <label for="adresse">Adresse :</label>
+                <input type="text" name="adresse[]" required>
+
+                <label for="username">Nom d'utilisateur :</label>
+                <input type="text" name="username[]" required>
+
+                <label for="password">Mot de passe :</label>
+                <input type="password" name="password[]" required>
+
+                <label for="role">Rôle :</label>
+                <select name="role[]" required>
+                    <option value="admin">Admin</option>
+                    <option value="utilisateur">Utilisateur</option>
+                </select>
+            </div>
+            <button type="button" onclick="ajouterUtilisateur()">Ajouter un utilisateur</button>
+            <button type="submit">Enregistrer</button>
+        </form>
+    </div>
+
+    <div class="copy-section">
+        <div class="container">
+            <div class="footer-top">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+    </script>
+    <a href="#" id="home" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-info">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                        
+                </div>
+                <div class="modal-body">
+                    <div class="news-gr">
+                    <img src="images/p6.jpg" class="img-responsive" />
+                    <h3 class="tittle1">TravelSwift</h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
